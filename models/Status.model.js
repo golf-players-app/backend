@@ -3,8 +3,9 @@ const { Schema, model } = require("mongoose");
 const statusSchema = new Schema(
   {
     status: {
-      type: String,
-      enum: ["Option 1", "Option 2", "Option 3"],
+      type: Number,
+      min: 1,
+      max: 3,
     },
     course: {
       type: String,
