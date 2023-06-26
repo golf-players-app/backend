@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const Player = require("../models/Player.model");
-const playerController = require("../controllers/Player.controller");
+const playerController = require("../controllers/player.controller");
 
 // C(R)UD
 //router.get("/", playerController.listByHandicap);

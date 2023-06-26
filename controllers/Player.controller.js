@@ -6,20 +6,21 @@ const regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
 
 module.exports.signup = async (req, res, next) => {
   try {
-    const {
-      name,
-      surnameOne,
-      surnameTwo,
-      email,
-      mobilePhone,
-      gender,
-      password,
-      profilePic,
-      federatedNumber,
-      handicap,
-      biography,
-      clubs,
-    } = req.body;
+    // const {
+    //   name,
+    //   surnameOne,
+    //   surnameTwo,
+    //   email,
+    //   mobilePhone,
+    //   gender,
+    //   password,
+    //   profilePic,
+    //   federatedNumber,
+    //   handicap,
+    //   biography,
+    //   clubs,
+    // } = req.body;
+    const { email, password } = req.body;
 
     if (!password.test(regEx)) {
       res.status(400).json({
@@ -40,18 +41,8 @@ module.exports.signup = async (req, res, next) => {
     const hashedPassword = bcrypt.hashedSync(password, salt);
 
     const player = await Player.create({
-      name,
-      surnameOne,
-      surnameTwo,
-      email,
-      mobilePhone,
-      gender,
+      ...req.body,
       password: hashedPassword,
-      profilePic,
-      federatedNumber,
-      handicap,
-      biography,
-      clubs,
     });
 
     return res.status(201).json(player);
@@ -116,8 +107,8 @@ module.exports.updatePassword = async (req, res, next) => {
   try {
     const { id } = req.params;
     const { password } = req.body;
-    const player = await Player.findById(id);
-    if (!bcrypt.compareSync(password, player.password)) {
+    const playerPassword = await Player.findById(id);
+    if (!bcrypt.compareSync(password, playerPassword.password)) {
       res.status(400).json({
         message: "Contraseña en uso, inserte una nueva contraseña",
       });
@@ -133,6 +124,7 @@ module.exports.updatePassword = async (req, res, next) => {
     const salt = bcrypt.genSaltSync(saltRounds);
     const hashedPassword = bcrypt.hashedSync(password, salt);
     const player = await Player.findByIdAndUpdate(id, { password: hashedPassword }, { new: true });
+    return res.status(201).json(player);
   } catch (error) {
     next(error);
   }
