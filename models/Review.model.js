@@ -11,9 +11,7 @@ const reviewSchema = new Schema(
       type: String,
     },
     player: { type: Schema.Types.ObjectId, ref: "Player" },
-    course: {
-      type: String,
-    },
+    course: { type: Schema.Types.ObjectId, ref: "Course" },
   },
   {
     timestamps: true,

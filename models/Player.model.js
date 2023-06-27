@@ -46,7 +46,7 @@ const playerSchema = new Schema(
       type: String,
     },
     clubs: [{ type: Schema.Types.ObjectId, ref: "Club" }],
-    follow: [{ type: Schema.Types.ObjectId, ref: "Player" }],
+    contacts: [{ type: Schema.Types.ObjectId, ref: "Player" }],
   },
   {
     timestamps: true,

@@ -7,10 +7,7 @@ const statusSchema = new Schema(
       min: 1,
       max: 3,
     },
-    course: {
-      type: String,
-      required: true,
-    },
+    course: { type: Schema.Types.ObjectId, ref: "Course" },
     player: { type: Schema.Types.ObjectId, ref: "Player" },
   },
   {

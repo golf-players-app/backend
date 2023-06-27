@@ -2,24 +2,10 @@ const Player = require("../models/Player.model.js");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const saltRounds = 10;
-const regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
+const { regEx } = require("../utils/regexPassword.js");
 
 module.exports.signup = async (req, res, next) => {
   try {
-    // const {
-    //   name,
-    //   surnameOne,
-    //   surnameTwo,
-    //   email,
-    //   mobilePhone,
-    //   gender,
-    //   password,
-    //   profilePic,
-    //   federatedNumber,
-    //   handicap,
-    //   biography,
-    //   clubs,
-    // } = req.body;
     const { email, password } = req.body;
 
     if (!password.test(regEx)) {
@@ -58,7 +44,7 @@ module.exports.login = async (req, res, next) => {
       res.status(400).json({ message: "Email y password no pueden estar vacíos" });
       return;
     }
-    const player = await User.findOne({ email });
+    const player = await Player.findOne({ email });
 
     if (!player) {
       res.status(401).json({ message: "Jugador no encontrado" });
@@ -66,12 +52,13 @@ module.exports.login = async (req, res, next) => {
     }
 
     if (bcrypt.compareSync(password, player.password)) {
-      const { _id, email, username } = player;
-      const payload = { _id, email, username };
+      const { _id, email } = player;
+      const payload = { _id, email };
       const authToken = jwt.sign(payload, process.env.TOKEN_SECRET, {
         algorithm: "HS256",
         expiresIn: "6h",
       });
+      req.session.currentUser = player._id;
       res.json({ authToken });
     } else {
       res.status(401).json({ message: "No se ha podido loguear al usuario" });
@@ -81,7 +68,19 @@ module.exports.login = async (req, res, next) => {
   }
 };
 
-module.exports.listByHandicap = async (req, res, next) => {};
+module.exports.listByContacts = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const contacts = [];
+    const contactsId = await Player.findById(id, { contacts: 1 });
+    contactsId.forEach(async (contactId) => {
+      contacts.push(await Player.findById(contactId));
+    });
+    return res.status(200).json(contacts);
+  } catch (error) {
+    next(error);
+  }
+};
 
 module.exports.detail = async (req, res, next) => {
   try {
@@ -135,6 +134,15 @@ module.exports.delete = async (req, res, next) => {
     const { id } = req.params;
     await Player.findByIdAndDelete(id);
     return res.status(200).json({ message: "Cuenta eliminada correctamente" });
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports.logout = async (req, res, next) => {
+  try {
+    req.session.destroy();
+    return res.status(200).json({ message: "Player desconectado correctamente" });
   } catch (error) {
     next(error);
   }

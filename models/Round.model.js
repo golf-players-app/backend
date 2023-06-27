@@ -3,14 +3,6 @@ const { Schema, model } = mongoose;
 
 const roundSchema = new Schema(
   {
-    club: {
-      type: String,
-      required: true,
-    },
-    course: {
-      type: String,
-      required: true,
-    },
     start: {
       type: Date,
       required: true,
@@ -23,10 +15,14 @@ const roundSchema = new Schema(
       type: Number,
       required: true,
     },
-    playerOne: { type: Schema.Types.ObjectId, ref: "Player" },
-    playerTwo: { type: Schema.Types.ObjectId, ref: "Player" },
-    playerThree: { type: Schema.Types.ObjectId, ref: "Player" },
-    playerFour: { type: Schema.Types.ObjectId, ref: "Player" },
+    status: {
+      type: String,
+      enum: ["Available", "Completed"],
+      required: true,
+    },
+    course: { type: Schema.Types.ObjectId, ref: "Course" },
+    club: { type: Schema.Types.ObjectId, ref: "Club" },
+    players: { type: Schema.Types.ObjectId, ref: "Player" },
   },
   {
     timestamps: true,

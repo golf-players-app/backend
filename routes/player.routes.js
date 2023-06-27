@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const Player = require("../models/Player.model");
 const playerController = require("../controllers/player.controller");
+const { isAuthenticated } = require("../middlewares/verifyToken.middleware.js");
 
 // C(R)UD
 //router.get("/", playerController.listByHandicap);
@@ -21,6 +21,6 @@ router.delete("/:id", playerController.delete);
 router.post("/login", playerController.login);
 
 //Verify
-router.get("/verify", playerController.verify);
+router.get("/verify", isAuthenticated, playerController.verify);
 
 router.module.exports = router;
