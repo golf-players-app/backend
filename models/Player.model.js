@@ -24,7 +24,7 @@ const playerSchema = new Schema(
     },
     gender: {
       type: String,
-      enum: ["Female, Male"],
+      enum: ["Female", "Male"],
       required: [true, "Gender is required"],
     },
     password: {

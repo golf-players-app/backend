@@ -8,7 +8,7 @@ module.exports.signup = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
-    if (!password.test(regEx)) {
+    if (!regEx.test(password)) {
       res.status(400).json({
         message:
           "La contraseña tiene que tener una longitud mínima de 6 caractéres con al menos una mayúscula, una minúsucla y un número",
@@ -24,7 +24,7 @@ module.exports.signup = async (req, res, next) => {
     }
 
     const salt = bcrypt.genSaltSync(saltRounds);
-    const hashedPassword = bcrypt.hashedSync(password, salt);
+    const hashedPassword = bcrypt.hashSync(password, salt);
 
     const player = await Player.create({
       ...req.body,

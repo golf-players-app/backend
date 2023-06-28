@@ -1,8 +1,10 @@
 const router = require("express").Router();
 
-router.use("/player", require("./player.routes"));
-router.use("/review", require("./review.routes"));
-router.use("/round", require("./round.routes"));
+router.use("/clubs", require("./club.routes"));
+router.use("courses", require("./course.routes"));
+router.use("/players", require("./player.routes"));
+router.use("/reviews", require("./review.routes"));
+router.use("/rounds", require("./round.routes"));
 router.use("/status", require("./status.routes"));
 
 module.exports = router;

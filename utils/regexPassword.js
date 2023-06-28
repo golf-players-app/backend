@@ -1,3 +1,3 @@
-const regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
+//La contraseña debe tener al menos 6 caracteres con una mayúscula, una minúscula y un número.
 
-module.exports = { regEx };
+exports.regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;

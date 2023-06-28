@@ -3,18 +3,18 @@ const playerController = require("../controllers/player.controller");
 const { isAuthenticated } = require("../middlewares/verifyToken.middleware.js");
 
 // C(R)UD
-router.get("/players/:id", playerController.detail);
-router.get("/player/:id/contacts", playerController.listByContacts);
+router.get("/:id", playerController.detail);
+router.get("/:id/contacts", playerController.listByContacts);
 
 // (C)RUD
 router.post("/signup", playerController.signup);
 
 // CR(U)D
-router.put("/players/:id", playerController.update);
-router.put("/players/:id/password", playerController.updatePassword);
+router.put("/:id", playerController.update);
+router.put("/:id/password", playerController.updatePassword);
 
 // CRU(D)
-router.delete("/players/:id", playerController.delete);
+router.delete("/:id", playerController.delete);
 
 // Login
 router.post("/login", playerController.login);
