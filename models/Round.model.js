@@ -21,8 +21,7 @@ const roundSchema = new Schema(
       required: true,
     },
     course: { type: Schema.Types.ObjectId, ref: "Course" },
-    club: { type: Schema.Types.ObjectId, ref: "Club" },
-    players: { type: Schema.Types.ObjectId, ref: "Player" },
+    players: [{ type: Schema.Types.ObjectId, ref: "Player" }],
   },
   {
     timestamps: true,

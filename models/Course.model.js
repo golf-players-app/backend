@@ -20,3 +20,5 @@ const courseSchema = new Schema({
   },
   club: { type: Schema.Types.ObjectId, ref: "Club" },
 });
+
+module.exports = model("Course", courseSchema);

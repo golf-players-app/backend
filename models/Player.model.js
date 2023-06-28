@@ -42,6 +42,11 @@ const playerSchema = new Schema(
       type: Number,
       required: [true, "Handicap is required"],
     },
+    gamePreference: {
+      type: String,
+      enum: ["Competitivo", "Amistoso", "Ambos"],
+      required: [true, "Game preference is required"],
+    },
     biography: {
       type: String,
     },
@@ -53,4 +58,4 @@ const playerSchema = new Schema(
   }
 );
 
-module.exports = model("Player", userSchema);
+module.exports = model("Player", playerSchema);
