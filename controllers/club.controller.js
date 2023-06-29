@@ -3,7 +3,7 @@ const Club = require("../models/Club.model");
 module.exports.detail = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const club = await Club.findbyId(id);
+    const club = await Club.findById(id);
     return res.status(200).json(club);
   } catch (error) {
     next(error);

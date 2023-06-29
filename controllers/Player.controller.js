@@ -58,7 +58,7 @@ module.exports.login = async (req, res, next) => {
         algorithm: "HS256",
         expiresIn: "6h",
       });
-      req.session.currentUser = player._id;
+      req.session.currentUser = player;
       res.json({ authToken });
     } else {
       res.status(401).json({ message: "No se ha podido loguear al usuario" });
@@ -73,8 +73,8 @@ module.exports.listByContacts = async (req, res, next) => {
     const { id } = req.params;
     const contacts = [];
     const contactsId = await Player.findById(id, { contacts: 1 });
-    contactsId.forEach(async (contactId) => {
-      contacts.push(await Player.findById(contactId));
+    contactsId.contacts.forEach(async (contact) => {
+      contacts.push(await Player.findById(contact));
     });
     return res.status(200).json(contacts);
   } catch (error) {
@@ -113,7 +113,7 @@ module.exports.updatePassword = async (req, res, next) => {
       });
       return;
     }
-    if (!password.test(regEx)) {
+    if (!regEx.test(password)) {
       res.status(400).json({
         message:
           "La contraseña tiene que tener una longitud mínima de 6 caractéres con al menos una mayúscula, una minúsucla y un número",
@@ -121,7 +121,7 @@ module.exports.updatePassword = async (req, res, next) => {
       return;
     }
     const salt = bcrypt.genSaltSync(saltRounds);
-    const hashedPassword = bcrypt.hashedSync(password, salt);
+    const hashedPassword = bcrypt.hashSync(password, salt);
     const player = await Player.findByIdAndUpdate(id, { password: hashedPassword }, { new: true });
     return res.status(201).json(player);
   } catch (error) {

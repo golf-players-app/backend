@@ -33,10 +33,20 @@ module.exports.delete = async (req, res, next) => {
   }
 };
 
+module.exports.listByPlayer = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const reviews = await Review.find({ player: id });
+    return res.status(200).json(reviews);
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports.listByCourse = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const reviews = await Status.find({ course: id });
+    const reviews = await Review.find({ course: id });
     return res.status(200).json(reviews);
   } catch (error) {
     next(error);

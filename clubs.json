@@ -1,0 +1,177 @@
+[
+  {
+    "name": "ARANJUEZ",
+    "address": "CALLE DE LA REINA KM. 3 Ctra. de Chinchón, 28300, ARANJUEZ MADRID",
+    "email": "golfdearanjuez@telefonica.net",
+    "telephone": "918916698",
+    "golfCourses": []
+  },
+  {
+    "name": "BARBERAN COLLAR",
+    "address": "CARRETERA CTRA.EXTREMADURA, KM 10,7 APTDO 150239 S/N, 28024, MADRID",
+    "email": "barberan@mde.es",
+    "telephone": "915091140",
+    "golfCourses": []
+  },
+  {
+    "name": "CENTRO NACIONAL",
+    "address": "CALLE Arroyo del Monte 5 Antigua Calle provisional Arroyo del Fresno 2, 28035, MADRID",
+    "email": "info@centronacionalgolf.com",
+    "telephone": "913769060",
+    "golfCourses": []
+  },
+  {
+    "name": "CLUB SOMOSAGUAS",
+    "address": "CALLE Pº DE LA FINCA, S/N, 28223, POZUELO DE ALARCON, MADRID",
+    "email": "somosaguasgolf@lafincagrupo.com",
+    "telephone": "913521647",
+    "golfCourses": []
+  },
+  {
+    "name": "EL ENCIN",
+    "address": "AUTOVIA A2,KM 35,600 SALIDA 32 (DESDE MADRID), 28805, ALCALA DE HENARES, MADRID",
+    "email": "encin@encingolf.com",
+    "telephone": "918307069",
+    "golfCourses": []
+  },
+  {
+    "name": "EL ROBLEDAL",
+    "address": "AVENIDA DE LA OLIMPIADA, S/N, 28810, VILLALBILLA, MADRID",
+    "email": "golf@robledalgolf.com",
+    "telephone": "918859659",
+    "golfCourses": []
+  },
+  {
+    "name": "ESCORIAL",
+    "address": "CARRETERA DE EL ESCORIAL A VALDEMORILLO KM. 13.30 S/N, 28280, ESCORIAL EL, MADRID",
+    "email": "info@golfescorial.es",
+    "telephone": "918903637",
+    "golfCourses": []
+  },
+  {
+    "name": "JARAMA RACE",
+    "address": "CARRETERA BURGOS KM. 28,100, 28707, CIUDALCAMPO, MADRID",
+    "email": "administracion_complejo@race.es",
+    "telephone": "916589121",
+    "golfCourses": []
+  },
+  {
+    "name": "JARDIN ARANJUEZ",
+    "address": "CALLE Segovia 2 Urbanización La Montaña, 28300, ARANJUEZ, MADRID",
+    "email": "golfdearanjuez@telefonica.net",
+    "telephone": "911349144",
+    "golfCourses": []
+  },
+  {
+    "name": "LA DEHESA",
+    "address": "AVENIDA UNIVERSIDAD 2, 28691, VILLANUEVA DE LA CAÑADA, MADRID",
+    "email": "secretaria@golfladehesa.es",
+    "telephone": "918157022",
+    "golfCourses": []
+  },
+  {
+    "name": "LA HERRERIA",
+    "address": "CARRETERA Robledo de Chavela S/N, 28200, SAN LORENZO DE EL ESCORIAL, MADRID",
+    "email": "",
+    "telephone": "918905111",
+    "golfCourses": []
+  },
+  {
+    "name": "LAS REJAS",
+    "address": "CALLE ISAAC ALBENIZ 77, 28220, MAJADAHONDA, MADRID",
+    "email": "infolasrejas@forus.es",
+    "telephone": "607756072",
+    "golfCourses": []
+  },
+  {
+    "name": "LOMAS BOSQUE",
+    "address": "GUADIANA, 102 URB.BOSQUE S/N, 28670, VILLAVICIOSA DE ODON, MADRID",
+    "email": "web@lomas-bosque.com",
+    "telephone": "916167500",
+    "golfCourses": []
+  },
+  {
+    "name": "MILITAR DEHESA",
+    "address": "AVENIDA de Arqueros 2, 28024, MADRID, MADRID",
+    "email": "golfdehesa@jcmadrid.com",
+    "telephone": "915095591",
+    "golfCourses": []
+  },
+  {
+    "name": "OLI HINOJOS",
+    "address": "CALLE VIA DE DUBLIN S/N, 28042, MADRID",
+    "email": "go@golfolivar.com",
+    "telephone": "917211889",
+    "golfCourses": []
+  },
+  {
+    "name": "PAL NEGRALEJO",
+    "address": "CARRETERA SAN FERNANDO-MEJORADA KM.2,5, 28522, RIVAS VACIAMADRID, MADRID ",
+    "email": "oficina@golfnegralejo.com",
+    "telephone": "916690422",
+    "golfCourses": []
+  },
+  {
+    "name": "POZUELO",
+    "address": "APARTADO CORREOS, 57169, 28223, POZUELO DE ALARCON, MADRID",
+    "email": "golfpozuelo@hotmail.com",
+    "telephone": "913515362",
+    "golfCourses": []
+  },
+  {
+    "name": "PUERTA HIERRO",
+    "address": "AVENIDA DE MIRAFLORES S/N, 28035, MADRID, MADRID",
+    "email": "lmalonso@rcphierro.com",
+    "telephone": "913161745",
+    "golfCourses": []
+  },
+  {
+    "name": "QUIJORNA",
+    "address": "CALLE REAL S/N, 28693, QUIJORNA, MADRID",
+    "email": "club@quijornagolf.es",
+    "telephone": "680227848",
+    "golfCourses": []
+  },
+  {
+    "name": "RCGLAS ROZAS",
+    "address": "CALLE CABO ORTEGAL 25, 28290, MATAS LAS, MADRID",
+    "email": "ncgm@ncgm.es",
+    "telephone": "916300820",
+    "golfCourses": []
+  },
+  {
+    "name": "RETAMARES",
+    "address": "CALLE CTRA.ALGETE-ALALPARDO KM.2,3, 28130, ALALPARDO, MADRID",
+    "email": "info@retamaresgolf.com",
+    "telephone": "916202540",
+    "golfCourses": []
+  },
+  {
+    "name": "RSHECC",
+    "address": "CARRETERA CRTA. DE BURGOS, KM 26,400, 28709, SAN SEBASTIAN DE LOS REYES, INDUSTRIAL DE MADRID",
+    "email": "deportes@rshecc.es",
+    "telephone": "916571018",
+    "golfCourses": []
+  },
+  {
+    "name": "SANTANDER",
+    "address": "AVENIDA CANTABRIA S/N, CIUDAD GRUPO DE SANTANDER, 28660, BOADILLA DEL MONTE, MADRID",
+    "email": "mastercaddie@golfsantander.es",
+    "telephone": "912573929",
+    "golfCourses": []
+  },
+  {
+    "name": "TORREJON",
+    "address": "CARRETERA N-II Km 22,8, 28850, TORREJON DE ARDOZ, MADRID",
+    "email": "campo_golf_ba_torrejon@mde.es",
+    "telephone": "916274474",
+    "golfCourses": []
+  },
+  {
+    "name": "VILLA DE MADRID",
+    "address": "CARRETERA CTRA. DE CASTILLA KM. 2, 28040, MADRID",
+    "email": "deportes@ccvm.es",
+    "telephone": "915502010",
+    "golfCourses": []
+  }
+]

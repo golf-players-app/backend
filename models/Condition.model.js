@@ -1,8 +1,8 @@
 const { Schema, model } = require("mongoose");
 
-const statusSchema = new Schema(
+const conditionSchema = new Schema(
   {
-    status: {
+    option: {
       type: Number,
       min: 1,
       max: 3,
@@ -15,4 +15,4 @@ const statusSchema = new Schema(
   }
 );
 
-module.export = model("Status", statusSchema);
+module.exports = model("Condition", conditionSchema);
