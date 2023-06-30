@@ -1,0 +1,10 @@
+[
+  {
+    "start": "2023-07-01T09:00:00Z",
+    "end": "2023-07-01T13:00:00Z",
+    "price": 60,
+    "status": "Available",
+    "course": "ObjectId(649f0185a07d51810b8acc3e)",
+    "player": ["ObjectId(649dad17efae3dd79927c8e6)"]
+  }
+]

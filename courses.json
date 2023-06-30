@@ -1,0 +1,253 @@
+[
+  {
+    "name": "Asociación de golf Villa de El Escorial",
+    "address": "Ctra. De El Escorial a Valdemorillo, km.13.300 - PC 28280 El Escorial, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.55287, -4.11766]
+    },
+    "holes": 9,
+    "club": "649dd1e3c4c5ee0aca0ccaa0"
+  },
+  {
+    "name": "LaFinca Golf Los Lagos",
+    "address": "Avda. de la Cabaña, s/n. - PC 28223 Pozuelo de Alarcón, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.40263, -3.79792]
+    },
+    "holes": 9,
+    "club": "649dd1e3c4c5ee0aca0cca9d"
+  },
+  {
+    "name": "Centro deportivo Barberan",
+    "address": "Ctra. Extremadura, km.10,7. Apdo 150239 - PC 28080 Cuatro Vientos, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.36877, -3.80051]
+    },
+    "holes": 9,
+    "club": "649dd1e3c4c5ee0aca0cca9b"
+  },
+  {
+    "name": "Centro deportivo militar La Dehesa",
+    "address": "Crta. de Extremadura km.8.800 Cuatro Vientos - PC 28024 Madrid, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.3831, -3.8018]
+    },
+    "holes": 9,
+    "club": "649dd1e3c4c5ee0aca0ccaa7"
+  },
+  {
+    "name": "Centro Nacional de Golf",
+    "address": "C/ Arroyo del Monte, Nº 5 - PC 28035 Madrid, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.4868, -3.7383]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0cca9c"
+  },
+  {
+    "name": "Club de campo Villa de Madrid",
+    "address": "Ctra. Castilla, km. 2 - PC 28040 Madrid, Madrid, Madrid, España",
+
+    "location": {
+      "type": "Point",
+      "coordinates": [40.44728, -3.74546]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccab2"
+  },
+  {
+    "name": "Club de golf Aranjuez",
+    "address": "Apartado De Correos, 60 - PC 28300 Aranjuez, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.04036, -3.56913]
+    },
+    "holes": 9,
+    "club": "649dd1e3c4c5ee0aca0cca9a"
+  },
+  {
+    "name": "Club de golf de la base aerea de Torrejon",
+    "address": "Base Aérea de Torrejón - PC 28850 Torrejón de Ardoz, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.4843, -3.4262]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccab1"
+  },
+  {
+    "name": "Club de Golf La Dehesa",
+    "address": "Avda. de la Universidad, 10 - PC 28691 Villanueva de la Cañada, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [-33.34452, -70.51643]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccaa3"
+  },
+  {
+    "name": "Club de golf Las Encinas",
+    "address": "Ctra. Boadilla-Pozuelo, km. 1,400 - PC 28660 Boadilla del Monte, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.4182, -3.8659]
+    },
+    "holes": 9,
+    "club": "649df63e8097a2f6e4654fbc"
+  },
+  {
+    "name": "Club de Golf Lomas Bosque",
+    "address": "C/ Guadiana, 110 -Urb. El Bosque. Apdo. 51 - PC 28670 Villaviciosa de Odón, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.3811, -3.9398]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccaa6"
+  },
+  {
+    "name": "Club de golf Olivar de la Hinojosa",
+    "address": "Avda. de Dublín, s/n. Campo Naciones - PC 28042 Madrid, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.4658, -3.5995]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccaa8"
+  },
+  {
+    "name": "Club de Golf Retamares",
+    "address": "Ctra. Algete-Alalpardo, Km. 2,300 - PC 28130 Valdeolmos, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.6089, -3.4714]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccaae"
+  },
+  {
+    "name": "Club Jarama R.A.C.E.",
+    "address": "Ctra. Burgos, km. 28,100 - PC 28707 San Sebastián de los Reyes., Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.6272, -3.6035]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccaa1"
+  },
+  {
+    "name": "El encin golf",
+    "address": "Autovía A2 Salida 34. Km. 35.600 - PC 28805 Alcalá de Henares, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.5199, -3.3115]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0cca9e"
+  },
+  {
+    "name": "El Robledal Golf",
+    "address": "Avda. de la Olimpiada s/n - PC 28810 Villalbilla, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.44178, -3.27296]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0cca9f"
+  },
+  {
+    "name": "Golf jardín de Aranjuez",
+    "address": "C/ Segovia, 2 - PC 28300 Aranjuez, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.05699, -3.60088]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccaa2"
+  },
+  {
+    "name": "Golf Negralejo",
+    "address": "Ctra. San Fernando-Mejorada Km 2.5 - PC 28522 Rivas Vaciamadrid, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.40765, -3.51363]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccaa9"
+  },
+  {
+    "name": "Golf Santander",
+    "address": "Ciudad Grupo Santander. Av. de Cantabria s/n - PC 28660 Boadilla del Monte, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.3916, -3.8711]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccab0"
+  },
+  {
+    "name": "Las rejas",
+    "address": "C/ Isaac Albéniz nº 77. - PC 28220 Majadahonda, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.4447, -3.8695]
+    },
+    "holes": 9,
+    "club": "649dd1e3c4c5ee0aca0ccaa5"
+  },
+  {
+    "name": "Real Club de Golf La Herrería",
+    "address": "Ctra. Robledo de Chavela, s/n - PC 28200 San Lorenzo de El Escorial, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.5807, -4.1577]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccaa4"
+  },
+  {
+    "name": "Real Club de Golf Las Rozas de Madrid",
+    "address": "Calle Cabo Ortegal 25 - PC 28290 Las Rozas de Madrid, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.54776, -3.91641]
+    },
+    "holes": 18,
+    "club": "649dd1e3c4c5ee0aca0ccaad"
+  },
+  {
+    "name": "Real club de la puerta de hierro",
+    "address": "Avda. Miraflores, s/n.-Ciudad Puerta de Hierro - PC 28035 Madrid, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.4643, -3.7414]
+    },
+    "holes": 36,
+    "club": "649dd1e3c4c5ee0aca0ccaab"
+  },
+  {
+    "name": "Real Club La Moraleja",
+    "address": "Pº Marquesa Vda. de Aldama, 50 - PC 28109 Alcobendas, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.51846, -3.60574]
+    },
+    "holes": 72,
+    "club": "649df63e8097a2f6e4654fbd"
+  },
+  {
+    "name": "Real Sociedad Hípica Española Club de Campo",
+    "address": "Ctra. de Burgos, km. 26,400 - PC 28709 San Sebastián de los Reyes, Madrid, Madrid, España",
+    "location": {
+      "type": "Point",
+      "coordinates": [40.607, -3.5905]
+    },
+    "holes": 36,
+    "club": "649dd1e3c4c5ee0aca0ccaaf"
+  }
+]

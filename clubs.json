@@ -173,5 +173,19 @@
     "email": "deportes@ccvm.es",
     "telephone": "915502010",
     "golfCourses": []
+  },
+  {
+    "name": "El Club Las Encinas de Boadilla",
+    "address": "Ctra. Boadilla-Pozuelo, km. 1,400 - PC 28660 Boadilla del Monte, Madrid, Madrid, España",
+    "email": "clublasencinas@clublasencinas.com",
+    "telephone": "916331100",
+    "golfCourses": []
+  },
+  {
+    "name": "Real Club La Moraleja",
+    "address": "Pº Marquesa Vda. de Aldama, 50 - PC 28109 Alcobendas, Madrid, Madrid, España",
+    "email": "info@golflamoraleja.com",
+    "telephone": "916500700",
+    "golfCourses": []
   }
 ]
