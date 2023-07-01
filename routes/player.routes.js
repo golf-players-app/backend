@@ -4,6 +4,7 @@ const { isAuthenticated } = require("../middlewares/verifyToken.middleware.js");
 
 //Verify
 router.get("/verify", isAuthenticated, playerController.verify);
+
 // C(R)UD
 router.get("/:id", playerController.detail);
 router.get("/:id/contacts", playerController.listByContacts);

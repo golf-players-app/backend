@@ -73,9 +73,11 @@ module.exports.listByContacts = async (req, res, next) => {
     const { id } = req.params;
     const contacts = [];
     const contactsId = await Player.findById(id, { contacts: 1 });
-    contactsId.contacts.forEach(async (contact) => {
-      contacts.push(await Player.findById(contact));
-    });
+    await Promise.all(
+      contactsId.contacts.map(async (contact) => {
+        contacts.push(await Player.findById(contact));
+      })
+    );
     return res.status(200).json(contacts);
   } catch (error) {
     next(error);
@@ -107,7 +109,7 @@ module.exports.updatePassword = async (req, res, next) => {
     const { id } = req.params;
     const { password } = req.body;
     const playerPassword = await Player.findById(id);
-    if (!bcrypt.compareSync(password, playerPassword.password)) {
+    if (bcrypt.compareSync(password, playerPassword.password)) {
       res.status(400).json({
         message: "Contraseña en uso, inserte una nueva contraseña",
       });
