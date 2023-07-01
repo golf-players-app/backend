@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
+const { playersLimit } = require("../utils/playersLimit");
 
 const roundSchema = new Schema(
   {
@@ -21,7 +22,7 @@ const roundSchema = new Schema(
       required: true,
     },
     course: { type: Schema.Types.ObjectId, ref: "Course" },
-    players: [{ type: Schema.Types.ObjectId, ref: "Player" }],
+    players: [{ type: Schema.Types.ObjectId, ref: "Player", max: playersLimit }],
   },
   {
     timestamps: true,
