@@ -18,14 +18,13 @@ const playerSchema = new Schema(
       unique: [true, "Email must be unique"],
       required: [true, "Email is required"],
     },
-    mobilePhone: {
-      type: Number,
-      required: [true, "Mobile is required"],
-    },
     gender: {
       type: String,
       enum: ["Female", "Male"],
-      required: [true, "Gender is required"],
+    },
+    birthday: {
+      type: Date,
+      required: [true, "Birthday is required"],
     },
     password: {
       type: String,
@@ -35,17 +34,14 @@ const playerSchema = new Schema(
       type: String,
     },
     federatedNumber: {
-      type: Number,
-      required: [true, "Federated Number is required"],
+      type: String,
     },
     handicap: {
       type: Number,
-      required: [true, "Handicap is required"],
     },
     gamePreference: {
       type: String,
       enum: ["Competitivo", "Amistoso", "Ambos"],
-      required: [true, "Game preference is required"],
     },
     biography: {
       type: String,
