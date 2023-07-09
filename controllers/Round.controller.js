@@ -20,7 +20,7 @@ module.exports.availableRounds = async (req, res, next) => {
     if (courses.length > 0) {
       await Promise.all(
         courses.map(async (course) => {
-          const round = await Round.find({ course: course, status: "Available" });
+          const round = await Round.find({ status: "Available" });
           if (round.length >= 1) {
             rounds.push(round);
           }
@@ -43,6 +43,20 @@ module.exports.addPlayers = async (req, res, next) => {
     } else {
       res.status(400).json({ message: "Número máximo de jugadores alcanzado" });
     }
+    if (round.players.length == playersLimit) {
+      round = await Round.findByIdAndUpdate(id, { status: "Completed" }, { new: true });
+    }
+    return res.status(200).json(round);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports.addPlayer = async (req, res, next) => {
+  try {
+    const playerId = req.session.currentUser._id;
+    const { id } = req.params;
+    let round = await Round.findByIdAndUpdate(id, { $push: { players: playerId } }, { new: true });
     if (round.players.length == playersLimit) {
       round = await Round.findByIdAndUpdate(id, { status: "Completed" }, { new: true });
     }
