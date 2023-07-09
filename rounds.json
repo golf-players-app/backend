@@ -4,7 +4,39 @@
     "end": "2023-07-01T13:00:00Z",
     "price": 60,
     "status": "Available",
-    "course": "ObjectId(649f0185a07d51810b8acc3e)",
-    "player": ["ObjectId(649dad17efae3dd79927c8e6)"]
+    "course": "649f0185a07d51810b8acc2d",
+    "players": ["649dad17efae3dd79927c8e6"]
+  },
+  {
+    "start": "2023-07-10T09:00:00Z",
+    "end": "2023-07-10T13:00:00Z",
+    "price": 60,
+    "status": "Available",
+    "course": "649f0185a07d51810b8acc2d",
+    "players": ["649dad17efae3dd79927c8e6"]
+  },
+  {
+    "start": "2023-07-11T09:00:00Z",
+    "end": "2023-07-11T13:00:00Z",
+    "price": 60,
+    "status": "Available",
+    "course": "649f0185a07d51810b8acc2d",
+    "players": ["649dad17efae3dd79927c8e6"]
+  },
+  {
+    "start": "2023-07-12T09:00:00Z",
+    "end": "2023-07-12T13:00:00Z",
+    "price": 60,
+    "status": "Available",
+    "course": "649f0185a07d51810b8acc3e",
+    "players": ["649dad17efae3dd79927c8e6"]
+  },
+  {
+    "start": "2023-07-13T09:00:00Z",
+    "end": "2023-07-13T13:00:00Z",
+    "price": 60,
+    "status": "Available",
+    "course": "649f0185a07d51810b8acc3e",
+    "players": ["649dad17efae3dd79927c8e6"]
   }
 ]
