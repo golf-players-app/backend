@@ -5,7 +5,7 @@ const { playersLimit } = require("../utils/playersLimit");
 
 module.exports.availableRounds = async (req, res, next) => {
   try {
-    const playerId = req.session.currentUser._id;
+    const playerId = req.payload._id;
     const player = await Player.findById(playerId);
     const courses = [];
     const rounds = [];
@@ -17,10 +17,11 @@ module.exports.availableRounds = async (req, res, next) => {
         });
       })
     );
+
     if (courses.length > 0) {
       await Promise.all(
         courses.map(async (course) => {
-          const round = await Round.find({ status: "Available" });
+          const round = await Round.find({ course: course, status: "Available" });
           if (round.length >= 1) {
             rounds.push(round);
           }
