@@ -2,8 +2,8 @@ const router = require("express").Router();
 const roundController = require("../controllers/round.controller");
 const { isAuthenticated } = require("../middlewares/verifyToken.middleware.js");
 
-router.get("/", roundController.availableRounds);
-router.post("/player/:id", roundController.addPlayer);
+router.get("/", isAuthenticated, roundController.availableRounds);
+router.post("/player/:id", isAuthenticated, roundController.addPlayer);
 router.post("/players/:id", roundController.addPlayers);
 
 module.exports = router;
