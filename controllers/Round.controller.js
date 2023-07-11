@@ -55,7 +55,7 @@ module.exports.addPlayers = async (req, res, next) => {
 
 module.exports.addPlayer = async (req, res, next) => {
   try {
-    const playerId = req.session.currentUser._id;
+    const playerId = req.payload._id;
     const { id } = req.params;
     let round = await Round.findByIdAndUpdate(id, { $push: { players: playerId } }, { new: true });
     if (round.players.length == playersLimit) {

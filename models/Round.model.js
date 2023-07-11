@@ -18,7 +18,7 @@ const roundSchema = new Schema(
     },
     status: {
       type: String,
-      enum: ["Available", "Completed"],
+      enum: ["Available", "Completed", "PlayerIn"],
       required: true,
     },
     course: { type: Schema.Types.ObjectId, ref: "Course" },
