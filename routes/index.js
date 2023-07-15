@@ -6,5 +6,6 @@ router.use("/players", require("./player.routes"));
 router.use("/reviews", require("./review.routes"));
 router.use("/rounds", require("./round.routes"));
 router.use("/conditions", require("./condition.routes"));
+router.use("/upload", require("./upload.routes"));
 
 module.exports = router;
