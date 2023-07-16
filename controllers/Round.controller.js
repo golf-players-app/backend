@@ -34,6 +34,37 @@ module.exports.availableRounds = async (req, res, next) => {
   }
 };
 
+module.exports.roundsPerPlayer = async (req, res, next) => {
+  try {
+    const playerId = req.payload._id;
+    const player = await Player.findById(playerId);
+    const courses = [];
+    const rounds = [];
+    await Promise.all(
+      player.clubs.map(async (clubId) => {
+        const club = await Club.findById(clubId);
+        club.golfCourses.map((course) => {
+          courses.push(course);
+        });
+      })
+    );
+
+    if (courses.length > 0) {
+      await Promise.all(
+        courses.map(async () => {
+          const round = await Round.find({ players: { $in: [playerId] } });
+          if (round.length >= 1) {
+            rounds.push(round);
+          }
+        })
+      );
+    }
+    return res.status(200).json(rounds);
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports.addPlayers = async (req, res, next) => {
   try {
     const { id } = req.params;
