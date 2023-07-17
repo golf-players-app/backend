@@ -8,7 +8,7 @@ module.exports.availableRounds = async (req, res, next) => {
     const playerId = req.payload._id;
     const player = await Player.findById(playerId);
     const courses = [];
-    const rounds = [];
+    let rounds = [];
     await Promise.all(
       player.clubs.map(async (clubId) => {
         const club = await Club.findById(clubId);
@@ -19,16 +19,13 @@ module.exports.availableRounds = async (req, res, next) => {
     );
 
     if (courses.length > 0) {
-      await Promise.all(
-        courses.map(async (course) => {
-          const round = await Round.find({ course: course, status: "Available" });
-          if (round.length >= 1) {
-            rounds.push(round);
-          }
+      rounds = await Promise.all(
+        courses.map((course) => {
+          return Round.find({ course: course, status: "Available" });
         })
       );
     }
-    return res.status(200).json(rounds);
+    return res.status(200).json(rounds.flat());
   } catch (error) {
     next(error);
   }
