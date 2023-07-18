@@ -25,7 +25,7 @@ module.exports.availableRounds = async (req, res, next) => {
         })
       );
     }
-    return res.status(200).json(rounds.flat());
+    return res.status(200).json([rounds.flat()]);
   } catch (error) {
     next(error);
   }
