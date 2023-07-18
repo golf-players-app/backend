@@ -1,7 +1,7 @@
 const Round = require("../models/Round.model.js");
 const Player = require("../models/Player.model.js");
 const Club = require("../models/Club.model.js");
-const { playersLimit } = require("../utils/playersLimit");
+const { playersLimit } = require("../utils/playersLimit.js");
 
 module.exports.availableRounds = async (req, res, next) => {
   try {
